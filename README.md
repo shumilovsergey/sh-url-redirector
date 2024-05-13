@@ -1,2 +1,2 @@
-# sh-url-redirector
-redirecting url 
+# template-django-tailwind
+here is my django tailwind template
