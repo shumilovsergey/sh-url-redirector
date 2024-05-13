@@ -1,1 +1,18 @@
-#empty
+version: '3'
+
+services:
+  url:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    container_name: "url_redirect-container"
+    environment:
+      - ALLOWED_HOSTS= localhost 127.0.0.1
+      - DEBUG= False
+    volumes:
+      - .:/code
+      - ./sqlite:/sqlite
+      - ./api/static:/api/static
